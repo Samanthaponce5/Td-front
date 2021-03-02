@@ -1,4 +1,4 @@
-.cards{
+.card{
     position: relative;
     background-color: #fff;
     width: 600px;
@@ -11,7 +11,7 @@
     background-position: center;
 }
 
-.tinderCards_cardContainer{
+.tinderCards__cardContainer{
     display: flex;
     justify-content: center;
     margin-top: 10vh;

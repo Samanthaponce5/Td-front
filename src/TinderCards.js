@@ -1,6 +1,7 @@
 import { SwipeableDrawer } from '@material-ui/core'
 import React, {useState} from 'react'
 import TinderCard from "react-tinder-card"
+import './TinderCards.css'
 
 
 function TinderCards(){
@@ -58,13 +59,13 @@ function TinderCards(){
 
     return(
         <div className='tinderCards'>
-            <div className='tinderCards_cardContainer'>
+            <div className='tinderCards__cardContainer'>
                 {people.map((person)=>
                 <TinderCard
                     className='swipe'
                     key={person.name}
                     preventSwipe={["up","down"]}
-                    onSwipe={(dir)=>SwipeableDrawer(dir,person.name)}
+                    onSwipe={(dir)=>swiped(dir,person.name)}
                     onCardLeftScreen={()=>outOfFrame(person.name)}
                 >
 
